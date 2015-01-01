@@ -1,0 +1,55 @@
+// Please try to maintain the same code style as outlined here:
+// https://github.com/lintelio/lintel/blob/master/CONTRIBUTING.md
+
+@mixin make-btn-core($bg, $border, $text) {
+  background-color: $bg;
+  border-color: $border;
+  color: $text;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: darken($bg, 10%);
+    border-color: darken($border, 13%);
+    color: $text;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: $bg;
+      border-color: $border;
+    }
+  }
+}
+
+@mixin make-btn($bg, $border: darken($bg, 10%), $text: #fff, $bg-inverse: $bg, $border-inverse: $border, $text-inverse: $text) {
+  @include make-btn-core($bg, $border, $text);
+
+  @if $btn-include-inverse == true {
+    &.inverse {
+      @include make-btn-core($bg-inverse, $border-inverse, $text-inverse);
+    }
+  }
+}
+
+@mixin make-btn-inverse($bg, $border, $text) {
+  @include make-btn($text, darken($text, 10%), #fff);
+}
+
+@mixin make-btn-block($screen-size, $class) {
+  @media screen and (max-width: $screen-size) {
+    .btn-block-#{$class}-max {
+      display: block;
+      width: 100%;
+    }
+  }
+}

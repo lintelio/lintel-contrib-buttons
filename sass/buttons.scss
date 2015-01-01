@@ -1,0 +1,165 @@
+// Please try to maintain the same code style as outlined here:
+// https://github.com/lintelio/lintel/blob/master/CONTRIBUTING.md
+
+@import 'buttons-vars';
+@import 'buttons-functions';
+@import 'buttons-mixins';
+
+
+// Base
+// ----
+.btn {
+  border: 1px solid;
+  @include make-btn($bg: $btn-base-bg, $border: $btn-base-border, $text: $btn-base-text);
+  border-radius: $btn-border-radius;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $btn-font-size;
+  padding: $btn-padding-y $btn-padding-x;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow $btn-animate ease-in-out,
+              background-color $btn-animate ease-in-out;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+
+// Active
+// ------
+.btn {
+  &:active,
+  &.active {
+    box-shadow: $btn-active-box-shadow;
+  }
+}
+
+
+// Disabled
+// --------
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: $btn-disabled-opacity;
+  // pointer-events: none;
+}
+
+
+// Sizes
+// -----
+.btn-xs {
+  border-radius: $btn-border-radius-xs;
+  font-size: $btn-font-size-xs;
+  padding: $btn-padding-y-xs $btn-padding-x-xs;
+}
+
+.btn-sm {
+  border-radius: $btn-border-radius-sm;
+  font-size: $btn-font-size-sm;
+  padding: $btn-padding-y-sm $btn-padding-x-sm;
+}
+
+.btn-lg {
+  border-radius: $btn-border-radius-lg;
+  font-size: $btn-font-size-lg;
+  padding: $btn-padding-y-lg $btn-padding-x-lg;
+}
+
+
+// States
+// ------
+// Primary
+.btn-primary {
+  @include make-btn(
+    $bg: $btn-primary,
+    $bg-inverse: $btn-primary-bg,
+    $border-inverse: $btn-primary-border,
+    $text-inverse: $btn-primary-text
+  );
+}
+
+// Secondary
+.btn-secondary {
+  @include make-btn(
+    $bg: $btn-secondary,
+    $bg-inverse: $btn-secondary-bg,
+    $border-inverse: $btn-secondary-border,
+    $text-inverse: $btn-secondary-text
+  );
+}
+
+// Error
+.btn-error {
+  @include make-btn(
+    $bg: $btn-error,
+    $bg-inverse: $btn-error-bg,
+    $border-inverse: $btn-error-border,
+    $text-inverse: $btn-error-text
+  );
+}
+
+// Warning
+.btn-warning {
+  @include make-btn(
+    $bg: $btn-warning,
+    $bg-inverse: $btn-warning-bg,
+    $border-inverse: $btn-warning-border,
+    $text-inverse: $btn-warning-text
+  );
+}
+
+// Success
+.btn-success {
+  @include make-btn(
+    $bg: $btn-success,
+    $bg-inverse: $btn-success-bg,
+    $border-inverse: $btn-success-border,
+    $text-inverse: $btn-success-text
+  );
+}
+
+// Info
+.btn-info {
+  @include make-btn(
+    $bg: $btn-info,
+    $bg-inverse: $btn-info-bg,
+    $border-inverse: $btn-info-border,
+    $text-inverse: $btn-info-text
+  );
+}
+
+// Link
+.btn-link {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  color: $text-link !important;
+  text-decoration: underline;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// Placeholder
+.btn-placeholder {
+  @extend .btn-link;
+  color: inherit !important;
+  text-decoration: none;
+}
+
+// Block
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+@if $btn-include-block-all == true {
+  @each $suffix, $resolution in $screen-max-map {
+    @include make-btn-block($resolution, $suffix);
+  }
+}
+@else if $btn-include-block-sm == true {
+  @include make-btn-block($screen-sm-max, "sm");
+}
