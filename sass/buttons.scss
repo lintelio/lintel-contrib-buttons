@@ -198,20 +198,22 @@ fieldset[disabled] .btn {
 
 // Border Radius
 .btn-group {
-  > .btn:not(:first-child):not(:last-child):not(.first):not(.last) {
+  > .btn:not(:first-child):not(:last-child):not(.first):not(.last):not(.btn-dropdown-toggle) {
     border-radius: 0;
   }
 
-  > .btn:first-child {
+  > .btn:first-child,
+  > .first {
     margin-left: 0;
 
-    &:not(:last-child):not(.last) {
+    &:not(:last-child):not(.last):not(.btn-dropdown-toggle) {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
   }
 
-  > .btn:last-child:not(:first-child):not(.first) {
+  > .btn:last-child:not(:first-child):not(.first),
+  > .btn-dropdown-toggle:not(:first-child):not(.first) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
