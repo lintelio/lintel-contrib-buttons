@@ -163,3 +163,126 @@ fieldset[disabled] .btn {
 @else if $btn-include-block-sm == true {
   @include make-btn-block($screen-sm-max, "sm");
 }
+
+
+// Button Groups
+// -------------
+.btn-group,
+.btn-group-y {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+
+  > .btn {
+    position: relative;
+    float: left;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      z-index: 2;
+    }
+  }
+}
+
+// Single Borders
+.btn-group {
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+    margin-left: -1px;
+  }
+}
+
+// Border Radius
+.btn-group {
+  > .btn:not(:first-child):not(:last-child):not(.first):not(.last) {
+    border-radius: 0;
+  }
+
+  > .btn:first-child {
+    margin-left: 0;
+
+    &:not(:last-child):not(.last) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  > .btn:last-child:not(:first-child):not(.first) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+// Nested button groups
+.btn-group {
+  > .btn-group {
+    float: left;
+
+    &:not(:first-child):not(:last-child):not(.first):not(.last) > .btn {
+      border-radius: 0;
+    }
+
+    &:first-child:not(.last) > .btn:last-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:last-child:not(.first) > .btn:first-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+}
+
+// Dropdown toggle
+.btn-group {
+   > .btn + .btn-dropdown-toggle {
+    padding-left: $btn-dropdown-toggle-padding-x;
+    padding-right: $btn-dropdown-toggle-padding-x;
+  }
+
+  @if $btn-dropdown-toggle-padding-x-xs != $btn-dropdown-toggle-padding-x {
+    > .btn-xs + .btn-dropdown-toggle {
+      padding-left: $btn-dropdown-toggle-padding-x-xs;
+      padding-right: $btn-dropdown-toggle-padding-x-xs;
+    }
+  }
+
+  @if $btn-dropdown-toggle-padding-x-sm != $btn-dropdown-toggle-padding-x {
+    > .btn-sm + .btn-dropdown-toggle {
+      padding-left: $btn-dropdown-toggle-padding-x-sm;
+      padding-right: $btn-dropdown-toggle-padding-x-sm;
+    }
+  }
+
+  @if $btn-dropdown-toggle-padding-x-lg != $btn-dropdown-toggle-padding-x {
+    > .btn-lg + .btn-dropdown-toggle {
+      padding-left: $btn-dropdown-toggle-padding-x-lg;
+      padding-right: $btn-dropdown-toggle-padding-x-lg;
+    }
+  }
+}
+
+// Open dropdown
+.btn-group.open > .btn-dropdown-toggle {
+  @extend .btn.active;
+}
+
+
+// Caret
+// -----
+.btn-caret {
+  height: 0;
+  width: 0;
+  display: inline-block;
+  border-top: $btn-caret-height solid;
+  border-right: $btn-caret-width solid transparent;
+  border-left: $btn-caret-width solid transparent;
+  margin-bottom: $btn-caret-margin-bottom;
+  vertical-align: middle;
+}

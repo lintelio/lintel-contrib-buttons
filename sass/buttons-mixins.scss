@@ -6,9 +6,9 @@
   border-color: $border;
   color: $text;
 
+  .open > &.btn-dropdown-toggle,
   &:hover,
   &:focus,
-  &.focus,
   &:active,
   &.active {
     background-color: darken($bg, 10%);
@@ -22,7 +22,6 @@
     &,
     &:hover,
     &:focus,
-    &.focus,
     &:active,
     &.active {
       background-color: $bg;

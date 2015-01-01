@@ -2,81 +2,92 @@
 // https://github.com/lintelio/lintel/blob/master/CONTRIBUTING.md
 
 // Global
-$btn-include-inverse:   true;
-$btn-include-block-all: true;
-$btn-include-block-sm:  true;
-$btn-animate:           $animate-fastest;
+$btn-include-inverse:           true;
+$btn-include-block-all:         true;
+$btn-include-block-sm:          true;
+$btn-animate:                   $animate-fastest;
 
 // Sizes
-$btn-border-radius-lg:  $border-radius-lg;
-$btn-font-size-lg:      $font-size-lg;
-$btn-padding-y-lg:      $cushion-y-lg;
-$btn-padding-x-lg:      $cushion-x-md;
+$btn-border-radius-lg:          $border-radius-lg;
+$btn-font-size-lg:              $font-size-lg;
+$btn-padding-y-lg:              $cushion-y-lg;
+$btn-padding-x-lg:              $cushion-x-md;
 
-$btn-border-radius-md:  $border-radius-base;
-$btn-font-size-md:      $font-size-base;
-$btn-padding-y-md:      $cushion-y-sm;
-$btn-padding-x-md:      $cushion-x-md;
+$btn-border-radius-md:          $border-radius-base;
+$btn-font-size-md:              $font-size-base;
+$btn-padding-y-md:              $cushion-y-sm;
+$btn-padding-x-md:              $cushion-x-md;
 
-$btn-border-radius-sm:  $border-radius-base;
-$btn-font-size-sm:      $font-size-base;
-$btn-padding-y-sm:      $cushion-y-xs;
-$btn-padding-x-sm:      $cushion-x-sm;
+$btn-border-radius-sm:          $border-radius-base;
+$btn-font-size-sm:              $font-size-base;
+$btn-padding-y-sm:              $cushion-y-xs;
+$btn-padding-x-sm:              $cushion-x-sm;
 
-$btn-border-radius-xs:  $border-radius-sm;
-$btn-font-size-xs:      $font-size-sm;
-$btn-padding-y-xs:      $cushion-y-xs - 2;
-$btn-padding-x-xs:      $cushion-x-xs;
+$btn-border-radius-xs:          $border-radius-sm;
+$btn-font-size-xs:              $font-size-sm;
+$btn-padding-y-xs:              $cushion-y-xs - 2;
+$btn-padding-x-xs:              $cushion-x-xs;
 
-$btn-border-radius:     $btn-border-radius-md;
-$btn-font-size:         $btn-font-size-md;
-$btn-padding-y:         $btn-padding-y-md;
-$btn-padding-x:         $btn-padding-x-md;
+$btn-border-radius:             $btn-border-radius-md;
+$btn-font-size:                 $btn-font-size-md;
+$btn-padding-y:                 $btn-padding-y-md;
+$btn-padding-x:                 $btn-padding-x-md;
+
+// Caret
+$btn-caret-height:              5px;
+$btn-caret-width:               5px;
+$btn-caret-margin-bottom:       0.15em;
+
+// Dropdown Toggle
+$btn-dropdown-toggle-padding-x-xs: floor($btn-padding-x * 0.4);
+$btn-dropdown-toggle-padding-x-sm: floor($btn-padding-x * 0.6);
+$btn-dropdown-toggle-padding-x:    floor($btn-padding-x * 0.6);
+$btn-dropdown-toggle-padding-x-lg: floor($btn-padding-x * 0.8);
 
 // Active
-$btn-active-box-shadow: inset 0 3px 3px 0 rgba(0,0,0,.2);
+$btn-active-box-shadow:         inset 0 3px 3px 0 rgba(0,0,0,.2);
 
 // Disabled
-$btn-disabled-opacity:  2 / 3;
+$btn-disabled-opacity:          2 / 3;
 
 // Base
-$btn-base:              $gray-darker;
-$btn-base-bg:           $bg-light !default;
-$btn-base-border:       $border-darkest !default;
-$btn-base-text:         $text-base !default;
+$btn-base:                      $gray-darker;
+$btn-base-bg:                   $bg-light !default;
+$btn-base-border:               $border-darkest !default;
+$btn-base-text:                 $text-base !default;
 
 // Primary
-$btn-primary:           $state-primary;
-$btn-primary-bg:        $state-primary-bg !default;
-$btn-primary-border:    $state-primary-border !default;
-$btn-primary-text:      $state-primary-text !default;
+$btn-primary:                   $state-primary;
+$btn-primary-bg:                $state-primary-bg !default;
+$btn-primary-border:            $state-primary-border !default;
+$btn-primary-text:              $state-primary-text !default;
 
 // Secondary
-$btn-secondary:         $state-secondary;
-$btn-secondary-bg:      $state-secondary-bg !default;
-$btn-secondary-border:  $state-secondary-border !default;
-$btn-secondary-text:    $state-secondary-text !default;
+$btn-secondary:                 $state-secondary;
+$btn-secondary-bg:              $state-secondary-bg !default;
+$btn-secondary-border:          $state-secondary-border !default;
+$btn-secondary-text:            $state-secondary-text !default;
 
 // Error
-$btn-error:             $state-error;
-$btn-error-bg:          $state-error-bg !default;
-$btn-error-border:      $state-error-border !default;
-$btn-error-text:        $state-error-text !default;
+$btn-error:                     $state-error;
+$btn-error-bg:                  $state-error-bg !default;
+$btn-error-border:              $state-error-border !default;
+$btn-error-text:                $state-error-text !default;
 
 // Warning
-$btn-warning:           $state-warning;
-$btn-warning-bg:        $state-warning-bg !default;
-$btn-warning-border:    $state-warning-border !default;
-$btn-warning-text:      $state-warning-text !default;
+$btn-warning:                   $state-warning;
+$btn-warning-bg:                $state-warning-bg !default;
+$btn-warning-border:            $state-warning-border !default;
+$btn-warning-text:              $state-warning-text !default;
 
 // Success
-$btn-success:           $state-success;
-$btn-success-bg:        $state-success-bg !default;
-$btn-success-border:    $state-success-border !default;
-$btn-success-text:      $state-success-text !default;
+$btn-success:                   $state-success;
+$btn-success-bg:                $state-success-bg !default;
+$btn-success-border:            $state-success-border !default;
+$btn-success-text:              $state-success-text !default;
 
 // Info
-$btn-info:              $state-info;
-$btn-info-bg:           $state-info-bg !default;
-$btn-info-border:       $state-info-border !default;
-$btn-info-text:         $state-info-text !default;
+$btn-info:                      $state-info;
+$btn-info-bg:                   $state-info-bg !default;
+$btn-info-border:               $state-info-border !default;
+$btn-info-text:                 $state-info-text !default;

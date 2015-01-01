@@ -22,8 +22,6 @@ Once the module has been installed, you will have to load it in your main SASS f
 @import "bower_components/lintel-contrib-buttons/sass/buttons.scss"
 ```
 
-
-
 You can use [wiredep](https://github.com/taptapship/wiredep) or [grunt-wiredep](https://github.com/stephenplusplus/grunt-wiredep) to automatically inject files in your build process.
 
 
@@ -87,7 +85,7 @@ Create a btn-block-*-max class for a new max-resolution.
 ```
 
 
-## Examples
+## Example Buttons
 
 #### Default
 ```html
@@ -133,6 +131,72 @@ Be sure to include `role="button"` for accessibility if the button does not link
 #### Smaller Button
 ```html
 <button class="btn btn-sm" type="button">Hello World</button>
+```
+
+
+## Example Button Groups
+
+#### Button Group
+```html
+<div class="btn-group">
+  <button class="btn" type="button">1</button>
+  <button class="btn" type="button">2</button>
+  <button class="btn" type="button">3</button>
+</div>
+```
+
+#### With Hidden Buttons
+Use the `.first` and `.last` classes to fix the border-radius where appropriate. 
+
+- `.first` - first visually visible button that's not `:first-child`
+- `.last`  - last visually visible button that's not `:last-child`.
+
+```html
+<div class="btn-group">
+  <button class="btn" type="button" style="display: none;">1</button>
+  <button class="btn first last" type="button">2</button>
+  <button class="btn" type="button" style="display: none;">3</button>
+</div>
+```
+
+
+## Example Dropdowns
+
+#### Single Dropdown
+```html
+<div class="btn-group">
+  <button class="btn btn-dropdown-toggle" type="button">
+    Dropdown
+    <span class="btn-caret" aria-hidden="true"></span>
+  </button>
+</div>
+```
+
+#### Open Dropdown
+```html
+<div class="btn-group open">
+  ...
+</div>
+```
+
+#### Split Dropdown
+```html
+<div class="btn-group">
+  <button class="btn" type="button">Split Dropdown</button>
+  <button class="btn btn-dropdown-toggle" type="button" aria-label="More Options"><span class="btn-caret" aria-hidden="true"></span></button>
+</div>
+```
+
+#### Nested Button Groups
+```html
+<div class="btn-group">
+  <div class="btn-group">
+    <button class="btn" type="button">Split Dropdown</button>
+    <button class="btn btn-dropdown-toggle" type="button" aria-label="More Options"><span class="btn-caret" aria-hidden="true"></span></button>
+  </div>
+  <button class="btn" type="button">Button</button>
+  <button class="btn" type="button">Button</button>
+</div>
 ```
 
 
