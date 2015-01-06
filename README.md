@@ -3,7 +3,7 @@ lintel-contrib-buttons
 
 > Buttons for lintel.
 
-[![npm](https://img.shields.io/npm/v/lintel-contrib-buttons.svg)](https://github.com/lintelio/lintel-contrib-buttons)
+[![npm](https://img.shields.io/npm/v/lintel-contrib-buttons.svg)](https://www.npmjs.com/package/lintel-contrib-buttons)
 [![Bower](https://img.shields.io/bower/v/lintel-contrib-buttons.svg)](https://github.com/lintelio/lintel-contrib-buttons)
 
 
