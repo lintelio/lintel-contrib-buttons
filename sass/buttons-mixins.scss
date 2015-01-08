@@ -40,10 +40,6 @@
   }
 }
 
-@mixin make-btn-inverse($bg, $border, $text) {
-  @include make-btn($text, darken($text, 10%), #fff);
-}
-
 @mixin make-btn-block($screen-size, $class) {
   @media screen and (max-width: $screen-size) {
     .btn-block-#{$class}-max {
