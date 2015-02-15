@@ -1,6 +1,6 @@
 {
   "name": "lintel-contrib-buttons",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Buttons for lintel.",
   "homepage": "https://github.com/lintelio/lintel-contrib-buttons",
   "repository": "https://github.com/lintelio/lintel-contrib-buttons.git",
@@ -9,7 +9,7 @@
     "lintel"
   ],
   "main": [
-    "sass/buttons.sass",
+    "sass/buttons.scss",
     "dist/buttons.min.css"
   ],
   "license": "MIT",
