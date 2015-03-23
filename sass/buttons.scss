@@ -23,6 +23,10 @@
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 
